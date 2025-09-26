@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart and Blood Pressure Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Heart Rate & Blood Pressure Predictor</h2>
+        <form method="POST" action="/predict">
+            <label for="age">Age:</label>
+            <input type="number" name="age" required>
+
+            <label for="sex">Sex (0 = Female, 1 = Male):</label>
+            <input type="number" name="sex" min="0" max="1" required>
+
+            <label for="is_smoker">Current Smoker? (0 = No, 1 = Yes):</label>
+            <input type="number" name="is_smoker" min="0" max="1" required>
+
+            <label for="cigs_per_day">Cigarettes per Day:</label>
+            <input type="number" name="cigs_per_day" required>
+
+            <label for="chol">Cholesterol Level:</label>
+            <input type="number" name="chol" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
+
